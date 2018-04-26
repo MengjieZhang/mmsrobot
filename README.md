@@ -8,6 +8,7 @@ cd catkin_ws
 catkin_make`
 
 step 3.if step2 occur error, Try solve it by yourself or you may contacts us through email,until finished step2
+Copy the robot model to the gazebo workspace:
 
 `roscd mmsrobot_description
 cd ..
