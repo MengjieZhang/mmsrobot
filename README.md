@@ -18,4 +18,3 @@ sudo cp -rf mmsrobot_description ~/.gazebo/model/`
 step 4.Now, you can control the mmsrobot through rqt_gui by running:
 
    ` roslaunch mmsrobot_description gazebo.launch`
-    
