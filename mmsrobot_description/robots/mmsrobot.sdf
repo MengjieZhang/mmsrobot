@@ -1,0 +1,2860 @@
+<sdf version='1.6'>
+  <model name='mmsrobot'>
+    <pose frame=''>0 0 0.167 0 -0 0</pose>
+    <static>0</static>
+    <link name='base_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.000366 -0.001117 -0.006716 0 -0 0</pose>
+        <mass>2.2836</mass>
+        <inertia>
+          <ixx>0.0376414</ixx>
+          <ixy>9.5348e-05</ixy>
+          <ixz>-4.17685e-06</ixz>
+          <iyy>0.0230924</iyy>
+          <iyz>0.000624428</iyz>
+          <izz>0.0199998</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name='fly00'>
+      <pose frame=''>0 0 0.060169 0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0 -0 0.003728 0 -0 0</pose>
+        <mass>0.0149166</mass>
+        <inertia>
+          <ixx>2.81706e-06</ixx>
+          <ixy>3.30456e-22</ixy>
+          <ixz>1.7129e-22</ixz>
+          <iyy>2.78486e-06</iyy>
+          <iyz>-5.32492e-22</iyz>
+          <izz>5.22358e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly00_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly00.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly00_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly00.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_pr00' type='prismatic'>
+      <child>fly00</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly01'>
+      <pose frame=''>0.017324 0.007425 0.070169 -1.5708 0 -2.35619</pose>
+      <inertial>
+        <pose frame=''>-0.0145 -0.010665 -0.007 0 -0 0</pose>
+        <mass>0.00190996</mass>
+        <inertia>
+          <ixx>1.06821e-07</ixx>
+          <ixy>-1.16953e-07</ixy>
+          <ixz>-3.21277e-21</ixz>
+          <iyy>1.79799e-07</iyy>
+          <iyz>-2.72639e-21</iyz>
+          <izz>2.78662e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly01_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly01.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly01_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly01.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re01' type='revolute'>
+      <child>fly01</child>
+      <parent>fly00</parent>
+      <axis>
+        <xyz>-0.707107 0.707107 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly011'>
+      <pose frame=''>0.037123 0.028638 0.0915 -1.5708 0 -2.35619</pose>
+      <inertial>
+        <pose frame=''>-0.057158 -0.013928 -0.002696 0 -0 0</pose>
+        <mass>0.0618238</mass>
+        <inertia>
+          <ixx>1.59856e-05</ixx>
+          <ixy>1.00612e-05</ixy>
+          <ixz>-8.7959e-06</ixz>
+          <iyy>0.000384511</iyy>
+          <iyz>1.42945e-06</iyz>
+          <izz>0.000378846</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly011_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly011.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly011_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly011.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re011' type='revolute'>
+      <child>fly011</child>
+      <parent>fly01</parent>
+      <axis>
+        <xyz>-0.707107 0.707107 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly012'>
+      <pose frame=''>0.036699 0.005586 0.1135 1.5708 0 2.35619</pose>
+      <inertial>
+        <pose frame=''>0.021926 0.023292 0.30021 0 -0 0</pose>
+        <mass>0.135433</mass>
+        <inertia>
+          <ixx>0.000561922</ixx>
+          <ixy>-2.34131e-07</ixy>
+          <ixz>-1.36221e-06</ixz>
+          <iyy>0.000560874</iyy>
+          <iyz>-6.86149e-05</iyz>
+          <izz>4.95915e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly012_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly012.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly012_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly012.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_pr012' type='prismatic'>
+      <child>fly012</child>
+      <parent>fly011</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly013'>
+      <pose frame=''>0.263044 0.263044 0.149023 0 0 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0 -0 0.019823 0 -0 0</pose>
+        <mass>0.028827</mass>
+        <inertia>
+          <ixx>8.30042e-06</ixx>
+          <ixy>2.50736e-07</ixy>
+          <ixz>-6.17525e-21</ixz>
+          <iyy>8.30042e-06</iyy>
+          <iyz>-1.91286e-21</iyz>
+          <izz>1.09605e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly013_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly013.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly013_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly013.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re013' type='revolute'>
+      <child>fly013</child>
+      <parent>fly012</parent>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly0141'>
+      <pose frame=''>0.275966 0.250121 0.189903 0 0 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0.065488 0.043841 -0.00595 0 -0 0</pose>
+        <mass>0.017487</mass>
+        <inertia>
+          <ixx>1.28343e-05</ixx>
+          <ixy>1.87004e-05</ixy>
+          <ixz>-1.10473e-07</ixz>
+          <iyy>3.20841e-05</iyy>
+          <iyz>2.70307e-07</iyz>
+          <izz>4.48302e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly0141_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0141.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly0141_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0141.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re0141' type='revolute'>
+      <child>fly0141</child>
+      <parent>fly013</parent>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly0142'>
+      <pose frame=''>0.250121 0.275966 0.189903 0 0 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.070367 -0.035484 -0.00595 0 -0 0</pose>
+        <mass>0.017487</mass>
+        <inertia>
+          <ixx>8.57428e-06</ixx>
+          <ixy>1.57973e-05</ixy>
+          <ixz>1.42772e-07</ixz>
+          <iyy>3.63441e-05</iyy>
+          <iyz>-2.5473e-07</iyz>
+          <izz>4.48302e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly0142_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0142.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly0142_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0142.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re0142' type='revolute'>
+      <child>fly0142</child>
+      <parent>fly013</parent>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly02'>
+      <pose frame=''>0.007425 -0.017324 0.070169 -1.5708 -0 2.35619</pose>
+      <inertial>
+        <pose frame=''>-0.0145 -0.010665 -0.007 0 -0 0</pose>
+        <mass>0.00190996</mass>
+        <inertia>
+          <ixx>1.06821e-07</ixx>
+          <ixy>-1.16953e-07</ixy>
+          <ixz>-3.7157e-21</ixz>
+          <iyy>1.79799e-07</iyy>
+          <iyz>-3.12343e-21</iyz>
+          <izz>2.78662e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly02_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly02.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly02_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly02.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re02' type='revolute'>
+      <child>fly02</child>
+      <parent>fly00</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly021'>
+      <pose frame=''>0.028638 -0.037123 0.0915 -1.5708 -0 2.35619</pose>
+      <inertial>
+        <pose frame=''>-0.057158 -0.013928 -0.002696 0 -0 0</pose>
+        <mass>0.0618238</mass>
+        <inertia>
+          <ixx>1.59856e-05</ixx>
+          <ixy>1.00612e-05</ixy>
+          <ixz>-8.7959e-06</ixz>
+          <iyy>0.000384511</iyy>
+          <iyz>1.42945e-06</iyz>
+          <izz>0.000378846</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly021_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly021.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly021_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly021.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re021' type='revolute'>
+      <child>fly021</child>
+      <parent>fly02</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly022'>
+      <pose frame=''>0.005586 -0.036699 0.1135 1.5708 -0 0.785398</pose>
+      <inertial>
+        <pose frame=''>0.021926 0.023292 0.30021 0 -0 0</pose>
+        <mass>0.135433</mass>
+        <inertia>
+          <ixx>0.000561922</ixx>
+          <ixy>-2.34131e-07</ixy>
+          <ixz>-1.36221e-06</ixz>
+          <iyy>0.000560874</iyy>
+          <iyz>-6.86149e-05</iyz>
+          <izz>4.95915e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly022_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly022.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly022_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly022.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_pr022' type='prismatic'>
+      <child>fly022</child>
+      <parent>fly021</parent>
+      <axis>
+        <xyz>-0.707107 0.707107 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly023'>
+      <pose frame=''>0.263044 -0.263044 0.149023 0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0 0.019823 0 -0 0</pose>
+        <mass>0.028827</mass>
+        <inertia>
+          <ixx>8.30042e-06</ixx>
+          <ixy>-2.50736e-07</ixy>
+          <ixz>8.46299e-21</ixz>
+          <iyy>8.30042e-06</iyy>
+          <iyz>5.98068e-21</iyz>
+          <izz>1.09605e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly023_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly023.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly023_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly023.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re023' type='revolute'>
+      <child>fly023</child>
+      <parent>fly022</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly0241'>
+      <pose frame=''>0.250121 -0.275966 0.189903 0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.043841 0.065488 -0.00595 0 -0 0</pose>
+        <mass>0.017487</mass>
+        <inertia>
+          <ixx>3.20841e-05</ixx>
+          <ixy>-1.87004e-05</ixy>
+          <ixz>2.70307e-07</ixz>
+          <iyy>1.28343e-05</iyy>
+          <iyz>1.10473e-07</iyz>
+          <izz>4.48302e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly0241_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0241.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly0241_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0241.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re0241' type='revolute'>
+      <child>fly0241</child>
+      <parent>fly023</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly0242'>
+      <pose frame=''>0.275966 -0.250121 0.189903 0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0.035484 -0.070367 -0.00595 0 -0 0</pose>
+        <mass>0.017487</mass>
+        <inertia>
+          <ixx>3.63441e-05</ixx>
+          <ixy>-1.57973e-05</ixy>
+          <ixz>-2.5473e-07</ixz>
+          <iyy>8.57428e-06</iyy>
+          <iyz>-1.42772e-07</iyz>
+          <izz>4.48302e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly0242_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0242.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly0242_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0242.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re0242' type='revolute'>
+      <child>fly0242</child>
+      <parent>fly023</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly03'>
+      <pose frame=''>-0.007425 0.017324 0.070169 1.5708 -0 2.35619</pose>
+      <inertial>
+        <pose frame=''>0.0145 0.010665 -0.007 0 -0 0</pose>
+        <mass>0.00190996</mass>
+        <inertia>
+          <ixx>1.06821e-07</ixx>
+          <ixy>-1.16953e-07</ixy>
+          <ixz>-3.20946e-21</ixz>
+          <iyy>1.79799e-07</iyy>
+          <iyz>-2.76609e-21</iyz>
+          <izz>2.78662e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly03_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly03.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly03_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly03.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re03' type='revolute'>
+      <child>fly03</child>
+      <parent>fly00</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly031'>
+      <pose frame=''>-0.028638 0.037123 0.0915 1.5708 0 2.35619</pose>
+      <inertial>
+        <pose frame=''>0.057158 0.013928 -0.002696 0 -0 0</pose>
+        <mass>0.0618238</mass>
+        <inertia>
+          <ixx>1.59856e-05</ixx>
+          <ixy>1.00612e-05</ixy>
+          <ixz>8.7959e-06</ixz>
+          <iyy>0.000384511</iyy>
+          <iyz>-1.42945e-06</iyz>
+          <izz>0.000378846</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly031_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly031.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly031_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly031.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re031' type='revolute'>
+      <child>fly031</child>
+      <parent>fly03</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly032'>
+      <pose frame=''>-0.006293 0.037406 0.1135 1.5708 -0 -2.35619</pose>
+      <inertial>
+        <pose frame=''>0.021926 0.023292 0.29921 0 -0 0</pose>
+        <mass>0.135433</mass>
+        <inertia>
+          <ixx>0.000561922</ixx>
+          <ixy>-2.34131e-07</ixy>
+          <ixz>-1.36221e-06</ixz>
+          <iyy>0.000560874</iyy>
+          <iyz>-6.86149e-05</iyz>
+          <izz>4.95915e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly032_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly032.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly032_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly032.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_pr032' type='prismatic'>
+      <child>fly032</child>
+      <parent>fly031</parent>
+      <axis>
+        <xyz>0.707107 -0.707107 -0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly033'>
+      <pose frame=''>-0.263044 0.263044 0.149023 0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0 0.019823 0 -0 0</pose>
+        <mass>0.028827</mass>
+        <inertia>
+          <ixx>8.30042e-06</ixx>
+          <ixy>-2.50736e-07</ixy>
+          <ixz>3.93791e-21</ixz>
+          <iyy>8.30042e-06</iyy>
+          <iyz>-7.26342e-21</iyz>
+          <izz>1.09605e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly033_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly033.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly033_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly033.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re033' type='revolute'>
+      <child>fly033</child>
+      <parent>fly032</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly0341'>
+      <pose frame=''>-0.250121 0.275966 0.189903 0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0.043841 -0.065488 -0.00595 0 -0 0</pose>
+        <mass>0.017487</mass>
+        <inertia>
+          <ixx>3.20841e-05</ixx>
+          <ixy>-1.87004e-05</ixy>
+          <ixz>-2.70307e-07</ixz>
+          <iyy>1.28343e-05</iyy>
+          <iyz>-1.10473e-07</iyz>
+          <izz>4.48302e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly0341_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0341.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly0341_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0341.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re0341' type='revolute'>
+      <child>fly0341</child>
+      <parent>fly033</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly0342'>
+      <pose frame=''>-0.275966 0.250121 0.189903 0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.035484 0.070367 -0.00595 0 -0 0</pose>
+        <mass>0.017487</mass>
+        <inertia>
+          <ixx>3.63441e-05</ixx>
+          <ixy>-1.57973e-05</ixy>
+          <ixz>2.5473e-07</ixz>
+          <iyy>8.57428e-06</iyy>
+          <iyz>1.42772e-07</iyz>
+          <izz>4.48302e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly0342_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0342.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly0342_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0342.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re0342' type='revolute'>
+      <child>fly0342</child>
+      <parent>fly033</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly04'>
+      <pose frame=''>-0.017324 -0.007425 0.070169 1.5708 -0 -2.35619</pose>
+      <inertial>
+        <pose frame=''>0.0145 0.010665 -0.007 0 -0 0</pose>
+        <mass>0.00190996</mass>
+        <inertia>
+          <ixx>1.06821e-07</ixx>
+          <ixy>-1.16953e-07</ixy>
+          <ixz>-2.6172e-21</ixz>
+          <iyy>1.79799e-07</iyy>
+          <iyz>-2.32272e-21</iyz>
+          <izz>2.78662e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly04_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly04.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly04_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly04.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re04' type='revolute'>
+      <child>fly04</child>
+      <parent>fly00</parent>
+      <axis>
+        <xyz>-0.707107 0.707107 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly041'>
+      <pose frame=''>-0.037123 -0.028638 0.0915 1.5708 -0 -2.35619</pose>
+      <inertial>
+        <pose frame=''>0.057158 0.013928 -0.002696 0 -0 0</pose>
+        <mass>0.0618238</mass>
+        <inertia>
+          <ixx>1.59856e-05</ixx>
+          <ixy>1.00612e-05</ixy>
+          <ixz>8.7959e-06</ixz>
+          <iyy>0.000384511</iyy>
+          <iyz>-1.42945e-06</iyz>
+          <izz>0.000378846</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly041_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly041.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly041_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly041.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re041' type='revolute'>
+      <child>fly041</child>
+      <parent>fly04</parent>
+      <axis>
+        <xyz>-0.707107 0.707107 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly042'>
+      <pose frame=''>-0.036699 -0.005586 0.1135 1.5708 0 -0.785398</pose>
+      <inertial>
+        <pose frame=''>0.021926 0.023292 0.30021 0 -0 0</pose>
+        <mass>0.135433</mass>
+        <inertia>
+          <ixx>0.000561922</ixx>
+          <ixy>-2.34131e-07</ixy>
+          <ixz>-1.36221e-06</ixz>
+          <iyy>0.000560874</iyy>
+          <iyz>-6.86149e-05</iyz>
+          <izz>4.95915e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly042_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly042.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly042_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly042.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_pr042' type='prismatic'>
+      <child>fly042</child>
+      <parent>fly041</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 -0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly043'>
+      <pose frame=''>-0.263044 -0.263044 0.149023 -0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 -0 0.019823 0 -0 0</pose>
+        <mass>0.028827</mass>
+        <inertia>
+          <ixx>8.30042e-06</ixx>
+          <ixy>2.50736e-07</ixy>
+          <ixz>1.7769e-18</ixz>
+          <iyy>8.30042e-06</iyy>
+          <iyz>-1.28372e-18</iyz>
+          <izz>1.09605e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly043_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly043.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly043_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly043.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re043' type='revolute'>
+      <child>fly043</child>
+      <parent>fly042</parent>
+      <axis>
+        <xyz>0 -0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly0431'>
+      <pose frame=''>-0.275966 -0.250121 0.189903 -0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.065488 -0.043841 -0.00595 0 -0 0</pose>
+        <mass>0.017487</mass>
+        <inertia>
+          <ixx>1.28343e-05</ixx>
+          <ixy>1.87004e-05</ixy>
+          <ixz>1.10473e-07</ixz>
+          <iyy>3.20841e-05</iyy>
+          <iyz>-2.70307e-07</iyz>
+          <izz>4.48302e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly0431_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0431.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly0431_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0431.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re0431' type='revolute'>
+      <child>fly0431</child>
+      <parent>fly043</parent>
+      <axis>
+        <xyz>0 -0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly0432'>
+      <pose frame=''>-0.250121 -0.275966 0.189903 -0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0.070367 0.035484 -0.00595 0 -0 0</pose>
+        <mass>0.017487</mass>
+        <inertia>
+          <ixx>8.57428e-06</ixx>
+          <ixy>1.57973e-05</ixy>
+          <ixz>-1.42772e-07</ixz>
+          <iyy>3.63441e-05</iyy>
+          <iyz>2.5473e-07</iyz>
+          <izz>4.48302e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly0432_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0432.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly0432_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly0432.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re0432' type='revolute'>
+      <child>fly0432</child>
+      <parent>fly043</parent>
+      <axis>
+        <xyz>0 -0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly11'>
+      <pose frame=''>0.013789 0.030759 0.0915 1.5708 -0 -2.35619</pose>
+      <inertial>
+        <pose frame=''>-0.013509 0.013412 -0.013443 0 -0 0</pose>
+        <mass>0.0226305</mass>
+        <inertia>
+          <ixx>6.82848e-06</ixx>
+          <ixy>-2.9332e-06</ixy>
+          <ixz>1.12725e-06</ixz>
+          <iyy>1.60121e-05</iyy>
+          <iyz>-3.28801e-08</iyz>
+          <izz>1.444e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly11_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly11.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly11_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly11.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re11' type='revolute'>
+      <child>fly11</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0.707107 0.707107 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly12'>
+      <pose frame=''>0.030759 -0.013789 0.0915 1.5708 -0 2.35619</pose>
+      <inertial>
+        <pose frame=''>-0.013509 0.013412 -0.013443 0 -0 0</pose>
+        <mass>0.0226305</mass>
+        <inertia>
+          <ixx>6.82848e-06</ixx>
+          <ixy>-2.9332e-06</ixy>
+          <ixz>1.12725e-06</ixz>
+          <iyy>1.60121e-05</iyy>
+          <iyz>-3.28801e-08</iyz>
+          <izz>1.444e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly12_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly12.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly12_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly12.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re12' type='revolute'>
+      <child>fly12</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly13'>
+      <pose frame=''>-0.013789 0.030759 0.0915 1.5708 -0 2.35619</pose>
+      <inertial>
+        <pose frame=''>0.013509 0.013412 -0.010557 0 -0 0</pose>
+        <mass>0.0226305</mass>
+        <inertia>
+          <ixx>6.82848e-06</ixx>
+          <ixy>2.9332e-06</ixy>
+          <ixz>1.12725e-06</ixz>
+          <iyy>1.60121e-05</iyy>
+          <iyz>3.28801e-08</iyz>
+          <izz>1.444e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly13_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly13.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly13_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly13.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re13' type='revolute'>
+      <child>fly13</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='fly14'>
+      <pose frame=''>-0.030759 -0.013789 0.0915 1.5708 -0 -2.35619</pose>
+      <inertial>
+        <pose frame=''>0.013509 0.013412 -0.010557 0 -0 0</pose>
+        <mass>0.0226305</mass>
+        <inertia>
+          <ixx>6.82848e-06</ixx>
+          <ixy>2.9332e-06</ixy>
+          <ixz>1.12725e-06</ixz>
+          <iyy>1.60121e-05</iyy>
+          <iyz>3.28801e-08</iyz>
+          <izz>1.444e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='fly14_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly14.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fly14_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/fly14.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fly_re14' type='revolute'>
+      <child>fly14</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0.707107 0.707107 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot10'>
+      <pose frame=''>0.078 -0.02 -0.128 0 -0 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0.0365 -0.020179 0.039377 0 -0 0</pose>
+        <mass>0.0555141</mass>
+        <inertia>
+          <ixx>6.36844e-05</ixx>
+          <ixy>-1.79309e-08</ixy>
+          <ixz>5.74002e-06</ixz>
+          <iyy>3.75374e-05</iyy>
+          <iyz>3.53051e-08</iyz>
+          <izz>4.18952e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot10_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot10.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot10_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot10.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re10' type='revolute'>
+      <child>foot10</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot11'>
+      <pose frame=''>0.135433 0.0252 -0.07525 -3.14159 0.523599 0</pose>
+      <inertial>
+        <pose frame=''>0.001189 0.008405 -0.015244 0 -0 0</pose>
+        <mass>0.0112721</mass>
+        <inertia>
+          <ixx>4.34882e-06</ixx>
+          <ixy>4.74634e-07</ixy>
+          <ixz>-1.32355e-06</ixz>
+          <iyy>4.23005e-06</iyy>
+          <iyz>1.05971e-06</iyz>
+          <izz>2.25417e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot11_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot11.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot11_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot11.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re11' type='revolute'>
+      <child>foot11</child>
+      <parent>foot10</parent>
+      <axis>
+        <xyz>-0.866025 -0 0.5</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot12'>
+      <pose frame=''>0.145 0.0132 -0.03 -1.60893 -0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.017675 -0.063086 -0.009254 0 -0 0</pose>
+        <mass>0.109163</mass>
+        <inertia>
+          <ixx>0.000247797</ixx>
+          <ixy>1.56483e-05</ixy>
+          <ixz>1.4615e-06</ixz>
+          <iyy>5.00224e-05</iyy>
+          <iyz>-6.07245e-05</iyz>
+          <izz>0.000227634</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot12_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot12.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot12_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot12.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re12' type='revolute'>
+      <child>foot12</child>
+      <parent>foot11</parent>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot130'>
+      <pose frame=''>0.099 0.0222 0.111 -0 0 -3.14159</pose>
+      <inertial>
+        <pose frame=''>-0.016105 -0.070315 -0.118826 0 -0 0</pose>
+        <mass>0.0890622</mass>
+        <inertia>
+          <ixx>0.000458333</ixx>
+          <ixy>2.95356e-05</ixy>
+          <ixz>2.96987e-05</ixz>
+          <iyy>0.000436063</iyy>
+          <iyz>-1.56412e-05</iyz>
+          <izz>0.000107866</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot130_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot130.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot130_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot130.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re130' type='revolute'>
+      <child>foot130</child>
+      <parent>foot12</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot131'>
+      <pose frame=''>0.115 0.0532 0.07 -0 0 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.016898 -0.00625 -0.022439 0 -0 0</pose>
+        <mass>0.00793204</mass>
+        <inertia>
+          <ixx>2.60059e-06</ixx>
+          <ixy>-1.75955e-14</ixy>
+          <ixz>1.82224e-06</ixz>
+          <iyy>4.05816e-06</iyy>
+          <iyz>2.44765e-14</iyz>
+          <izz>1.55308e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot131_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot131.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot131_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot131.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re131' type='revolute'>
+      <child>foot131</child>
+      <parent>foot12</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot132'>
+      <pose frame=''>0.075898 0.0717 0.018076 -1.71483 0 1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.004 0.004855 -0.032641 0 -0 0</pose>
+        <mass>0.00704964</mass>
+        <inertia>
+          <ixx>3.32115e-06</ixx>
+          <ixy>-7.02514e-23</ixy>
+          <ixz>3.31711e-22</ixz>
+          <iyy>3.2065e-06</iyy>
+          <iyz>4.58837e-07</iyz>
+          <izz>1.89837e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot132_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot132.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot132_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot132.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re132' type='revolute'>
+      <child>foot132</child>
+      <parent>foot131</parent>
+      <axis>
+        <xyz>-0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot133'>
+      <pose frame=''>0.141898 0.0717 0.017838 -1.71483 0 1.5708</pose>
+      <inertial>
+        <pose frame=''>0.020815 0.021552 0.030199 0 -0 0</pose>
+        <mass>0.0890622</mass>
+        <inertia>
+          <ixx>0.000436063</ixx>
+          <ixy>-1.12399e-05</ixy>
+          <ixz>-3.14748e-05</ixz>
+          <iyy>0.000123524</iyy>
+          <iyz>-7.82583e-05</iyz>
+          <izz>0.000442675</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot133_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot133.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot133_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot133.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re133' type='revolute'>
+      <child>foot133</child>
+      <parent>foot132</parent>
+      <axis>
+        <xyz>-0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot21'>
+      <pose frame=''>0.135433 -0.0248 -0.07525 0 0.523599 0</pose>
+      <inertial>
+        <pose frame=''>0.000274 0.008652 0.016939 0 -0 0</pose>
+        <mass>0.0119788</mass>
+        <inertia>
+          <ixx>4.92814e-06</ixx>
+          <ixy>5.17743e-07</ixy>
+          <ixz>1.62038e-06</ixz>
+          <iyy>4.97488e-06</iyy>
+          <iyz>-1.13963e-06</iyz>
+          <izz>2.44497e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot21_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot21.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot21_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot21.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re21' type='revolute'>
+      <child>foot21</child>
+      <parent>foot10</parent>
+      <axis>
+        <xyz>-0.866025 -0 0.5</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot22'>
+      <pose frame=''>0.145 -0.0128 -0.03 -1.60794 -0 1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.017675 -0.063603 0.004483 0 -0 0</pose>
+        <mass>0.109162</mass>
+        <inertia>
+          <ixx>0.000247798</ixx>
+          <ixy>1.57142e-05</ixy>
+          <ixz>-2.81037e-07</ixz>
+          <iyy>4.19201e-05</iyy>
+          <iyz>4.67196e-05</iyz>
+          <izz>0.000235737</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot22_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot22.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot22_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot22.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re22' type='revolute'>
+      <child>foot22</child>
+      <parent>foot21</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot230'>
+      <pose frame=''>0.099 -0.0218 0.111 -1.40903 -0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>0.070318 0.119873 -0.003246 0 -0 0</pose>
+        <mass>0.0890585</mass>
+        <inertia>
+          <ixx>0.000436032</ixx>
+          <ixy>-1.06788e-05</ixy>
+          <ixz>3.16695e-05</ixz>
+          <iyy>0.000126403</iyy>
+          <iyz>8.38887e-05</iyz>
+          <izz>0.00043976</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot230_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot230.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot230_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot230.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re230' type='revolute'>
+      <child>foot230</child>
+      <parent>foot22</parent>
+      <axis>
+        <xyz>-0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot231'>
+      <pose frame=''>0.115 -0.0528 0.07 -0 0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>0.005787 -0.015516 -0.020604 0 -0 0</pose>
+        <mass>0.00863861</mass>
+        <inertia>
+          <ixx>4.60582e-06</ixx>
+          <ixy>6.21084e-08</ixy>
+          <ixz>8.24743e-08</ixz>
+          <iyy>2.96701e-06</iyy>
+          <iyz>-2.06824e-06</iyz>
+          <izz>1.77809e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot231_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot231.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot231_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot231.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re231' type='revolute'>
+      <child>foot231</child>
+      <parent>foot22</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot232'>
+      <pose frame=''>0.075898 -0.0713 0.018076 1.78367 0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.004 -0.007089 -0.03223 0 -0 0</pose>
+        <mass>0.00704964</mass>
+        <inertia>
+          <ixx>3.32115e-06</ixx>
+          <ixy>2.27509e-23</ixy>
+          <ixz>1.58095e-22</ixz>
+          <iyy>3.12925e-06</iyy>
+          <iyz>-6.61515e-07</iyz>
+          <izz>2.67087e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot232_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot232.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot232_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot232.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re232' type='revolute'>
+      <child>foot232</child>
+      <parent>foot231</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot233'>
+      <pose frame=''>0.141898 -0.0713 0.017838 1.78367 0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>0.020818 -0.019428 0.031612 0 -0 0</pose>
+        <mass>0.0890585</mass>
+        <inertia>
+          <ixx>0.000436032</ixx>
+          <ixy>9.04708e-06</ixy>
+          <ixz>-3.21737e-05</ixz>
+          <iyy>0.00013578</iyy>
+          <iyz>9.94373e-05</iyz>
+          <izz>0.000430383</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot233_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot233.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot233_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot233.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re233' type='revolute'>
+      <child>foot233</child>
+      <parent>foot232</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot30'>
+      <pose frame=''>-0.078 -0.02 -0.128 -0 -0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.020179 -0.0365 0.039378 0 -0 0</pose>
+        <mass>0.0555116</mass>
+        <inertia>
+          <ixx>3.75355e-05</ixx>
+          <ixy>-1.87987e-08</ixy>
+          <ixz>3.65931e-08</ixz>
+          <iyy>6.36826e-05</iyy>
+          <iyz>5.73967e-06</iyz>
+          <izz>4.18944e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot30_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot30.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot30_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot30.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re30' type='revolute'>
+      <child>foot30</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot31'>
+      <pose frame=''>-0.135433 0.0252 -0.07525 0 0.523599 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.000274 0.008652 0.016939 0 -0 0</pose>
+        <mass>0.0119788</mass>
+        <inertia>
+          <ixx>4.92814e-06</ixx>
+          <ixy>5.17743e-07</ixy>
+          <ixz>1.62038e-06</ixz>
+          <iyy>4.97488e-06</iyy>
+          <iyz>-1.13963e-06</iyz>
+          <izz>2.44497e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot31_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot31.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot31_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot31.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re31' type='revolute'>
+      <child>foot31</child>
+      <parent>foot30</parent>
+      <axis>
+        <xyz>-0.866025 -0 -0.5</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot32'>
+      <pose frame=''>-0.145 0.0132 -0.03 -2.22637 -0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.017675 -0.054422 -0.033221 0 -0 0</pose>
+        <mass>0.109162</mass>
+        <inertia>
+          <ixx>0.000247798</ixx>
+          <ixy>1.29667e-05</ixy>
+          <ixz>8.88147e-06</ixz>
+          <iyy>6.2927e-05</iyy>
+          <iyz>-7.62425e-05</iyz>
+          <izz>0.00021473</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot32_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot32.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot32_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot32.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re32' type='revolute'>
+      <child>foot32</child>
+      <parent>foot31</parent>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot330'>
+      <pose frame=''>-0.099 0.0222 0.111 3.13976 -0 1.5708</pose>
+      <inertial>
+        <pose frame=''>0.070318 -0.016322 0.118801 0 -0 0</pose>
+        <mass>0.0890585</mass>
+        <inertia>
+          <ixx>0.000436032</ixx>
+          <ixy>-2.95074e-05</ixy>
+          <ixz>-1.56943e-05</ixz>
+          <iyy>0.000458409</iyy>
+          <iyz>-2.90827e-05</iyz>
+          <izz>0.000107754</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot330_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot330.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot330_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot330.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re330' type='revolute'>
+      <child>foot330</child>
+      <parent>foot32</parent>
+      <axis>
+        <xyz>-0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot331'>
+      <pose frame=''>-0.115 0.0637 0.07 -2.98593 0 1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.004713 0.018523 0.017949 0 -0 0</pose>
+        <mass>0.00863861</mass>
+        <inertia>
+          <ixx>4.60582e-06</ixx>
+          <ixy>-7.41441e-08</ixy>
+          <ixz>-7.1848e-08</ixz>
+          <iyy>2.30487e-06</iyy>
+          <iyz>-2.15091e-06</iyz>
+          <izz>2.44022e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot331_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot331.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot331_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot331.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re331' type='revolute'>
+      <child>foot331</child>
+      <parent>foot32</parent>
+      <axis>
+        <xyz>-0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot332'>
+      <pose frame=''>-0.075898 0.0717 0.018077 -2.98593 0 1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.004 -0.032582 0.005234 0 -0 0</pose>
+        <mass>0.00704964</mass>
+        <inertia>
+          <ixx>3.32115e-06</ixx>
+          <ixy>-2.66707e-22</ixy>
+          <ixz>3.39153e-23</ixz>
+          <iyy>2.00919e-07</iyy>
+          <iyz>4.93802e-07</iyz>
+          <izz>3.19542e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot332_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot332.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot332_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot332.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re332' type='revolute'>
+      <child>foot332</child>
+      <parent>foot331</parent>
+      <axis>
+        <xyz>-0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot333'>
+      <pose frame=''>-0.141898 0.0717 0.017838 -2.98593 0 1.5708</pose>
+      <inertial>
+        <pose frame=''>0.020818 0.030449 0.021204 0 -0 0</pose>
+        <mass>0.0890585</mass>
+        <inertia>
+          <ixx>0.000436032</ixx>
+          <ixy>-3.16037e-05</ixy>
+          <ixz>-1.08719e-05</ixz>
+          <iyy>0.000440772</iyy>
+          <iyz>-8.19697e-05</iyz>
+          <izz>0.000125391</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot333_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot333.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot333_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot333.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re333' type='revolute'>
+      <child>foot333</child>
+      <parent>foot332</parent>
+      <axis>
+        <xyz>-0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot41'>
+      <pose frame=''>-0.135433 -0.0248 -0.07525 0 0.523599 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.000273 -0.008652 0.016939 0 -0 0</pose>
+        <mass>0.0119787</mass>
+        <inertia>
+          <ixx>4.92805e-06</ixx>
+          <ixy>-5.17789e-07</ixy>
+          <ixz>1.62015e-06</ixz>
+          <iyy>4.97482e-06</iyy>
+          <iyz>1.13954e-06</iyz>
+          <izz>2.44505e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot41_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot41.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot41_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot41.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re41' type='revolute'>
+      <child>foot41</child>
+      <parent>foot30</parent>
+      <axis>
+        <xyz>-0.866025 -0 -0.5</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot42'>
+      <pose frame=''>-0.145 -0.0128 -0.03 2.84294 0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>0.017675 0.012113 -0.0626 0 -0 0</pose>
+        <mass>0.109163</mass>
+        <inertia>
+          <ixx>0.000247797</ixx>
+          <ixy>3.79167e-06</ixy>
+          <ixz>-1.52522e-05</ixz>
+          <iyy>0.000246117</iyy>
+          <iyz>7.93308e-06</iyz>
+          <izz>3.15388e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot42_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot42.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot42_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot42.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re42' type='revolute'>
+      <child>foot42</child>
+      <parent>foot41</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot430'>
+      <pose frame=''>-0.099 -0.0538 0.111 3.13971 0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>0.038315 0.015882 0.118856 0 -0 0</pose>
+        <mass>0.0890622</mass>
+        <inertia>
+          <ixx>0.000436063</ixx>
+          <ixy>2.95649e-05</ixy>
+          <ixz>-1.55857e-05</ixz>
+          <iyy>0.00045822</iyy>
+          <iyz>3.03566e-05</iyz>
+          <izz>0.000107979</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='foot_re430' type='revolute'>
+      <child>foot430</child>
+      <parent>foot42</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot431'>
+      <pose frame=''>-0.115 -0.0633 0.07 2.98404 0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.00425 -0.02021 0.01951 0 -0 0</pose>
+        <mass>0.00793204</mass>
+        <inertia>
+          <ixx>4.05816e-06</ixx>
+          <ixy>1.23605e-22</ixy>
+          <ixz>-1.02309e-22</ixz>
+          <iyy>2.01006e-06</iyy>
+          <iyz>1.89484e-06</iyz>
+          <izz>2.14361e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot431_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot431.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot431_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot431.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re431' type='revolute'>
+      <child>foot431</child>
+      <parent>foot42</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot432'>
+      <pose frame=''>-0.075898 -0.0713 0.018077 2.98404 0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.004 0.032572 0.005296 0 -0 0</pose>
+        <mass>0.00704964</mass>
+        <inertia>
+          <ixx>3.32115e-06</ixx>
+          <ixy>3.45281e-22</ixy>
+          <ixz>5.50995e-23</ixz>
+          <iyy>2.02793e-07</iyy>
+          <iyz>-4.99447e-07</iyz>
+          <izz>3.19355e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot432_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot432.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot432_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot432.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re432' type='revolute'>
+      <child>foot432</child>
+      <parent>foot431</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='foot433'>
+      <pose frame=''>-0.141898 -0.0713 0.017838 2.98404 0 -1.5708</pose>
+      <inertial>
+        <pose frame=''>0.020815 -0.030488 0.021142 0 -0 0</pose>
+        <mass>0.0890622</mass>
+        <inertia>
+          <ixx>0.000436063</ixx>
+          <ixy>3.16239e-05</ixy>
+          <ixz>-1.08133e-05</ixz>
+          <iyy>0.000440501</iyy>
+          <iyz>8.25438e-05</iyz>
+          <izz>0.000125698</izz>
+        </inertia>
+      </inertial>
+      <collision name='foot433_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot433.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='foot433_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/foot433.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='foot_re433' type='revolute'>
+      <child>foot433</child>
+      <parent>foot432</parent>
+      <axis>
+        <xyz>0 -1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='wheel1'>
+      <pose frame=''>0.038 0 -4.1e-05 3.14159 1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>-1e-05 -0 0.000779 0 -0 0</pose>
+        <mass>0.162807</mass>
+        <inertia>
+          <ixx>0.0018155</ixx>
+          <ixy>-2.41657e-18</ixy>
+          <ixz>-8.53429e-09</ixz>
+          <iyy>0.0018155</iyy>
+          <iyz>2.97533e-18</iyz>
+          <izz>0.00362481</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/wheel1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/wheel1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='wheel_re1' type='revolute'>
+      <child>wheel1</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='wheel2'>
+      <pose frame=''>-0.04 0 -4.5e-05 -3e-06 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>1e-05 0 -0.001221 0 -0 0</pose>
+        <mass>0.162807</mass>
+        <inertia>
+          <ixx>0.0018155</ixx>
+          <ixy>-2.18751e-18</ixy>
+          <ixz>8.53429e-09</ixz>
+          <iyy>0.0018155</iyy>
+          <iyz>-2.66018e-18</iyz>
+          <izz>0.00362481</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/wheel2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mmsrobot_description/meshes/wheel2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='wheel_re2' type='revolute'>
+      <child>wheel2</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>1 -0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>  <damping>0.1</damping>  <friction>0.3</friction>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name='foot1_fixed' type='fixed'>
+      <child>foot133</child>
+      <parent>foot130</parent>
+    </joint>
+    <joint name='foot2_fixed' type='fixed'>
+      <child>foot233</child>
+      <parent>foot230</parent>
+    </joint>
+    <joint name='foot3_fixed' type='fixed'>
+      <child>foot333</child>
+      <parent>foot330</parent>
+    </joint>
+    <joint name='foot4_fixed' type='fixed'>
+      <child>foot433</child>
+      <parent>foot430</parent>
+    </joint>
+
+    <joint name='fly1_fixed' type='fixed'>
+      <child>fly11</child>
+      <parent>fly011</parent>
+    </joint>
+    <joint name='fly2_fixed' type='fixed'>
+      <child>fly12</child>
+      <parent>fly021</parent>
+    </joint>
+    <joint name='fly3_fixed' type='fixed'>
+      <child>fly13</child>
+      <parent>fly031</parent>
+    </joint>
+    <joint name='fly4_fixed' type='fixed'>
+      <child>fly14</child>
+      <parent>fly041</parent>
+    </joint>
+    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+      <robotNamespace>/mmsrobot</robotNamespace>
+    </plugin>
+  </model>
+</sdf>

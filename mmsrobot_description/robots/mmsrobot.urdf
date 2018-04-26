@@ -1,0 +1,3441 @@
+<robot
+  name="mmsrobot">
+  <link
+    name="base_link">
+  </link>
+ <joint
+    name="base_link0_fixed"
+    type="fixed">
+    <parent
+      link="base_link" />
+    <child
+      link="base_link0" />
+  </joint>
+  <link
+    name="base_link0">
+    <inertial>
+      <origin
+        xyz="0.000365591606460035 -0.00111717371476661 -0.00671578032312127"
+        rpy="0 0 0" />
+      <mass
+        value="2.28359826210286" />
+      <inertia
+        ixx="0.0376414046378065"
+        ixy="9.5348042036841E-05"
+        ixz="-4.17685026793869E-06"
+        iyy="0.0230923897402715"
+        iyz="0.000624427846058721"
+        izz="0.0199997521264484" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel1">
+    <inertial>
+      <origin
+        xyz="-1.03209863246588E-05 -1.99433017201698E-16 0.000778936315291849"
+        rpy="0 0 0" />
+      <mass
+        value="0.162807208863698" />
+      <inertia
+        ixx="0.00181549978921057"
+        ixy="-2.41657419130976E-18"
+        ixz="-8.53429402280263E-09"
+        iyy="0.00181549982536503"
+        iyz="2.97533364913781E-18"
+        izz="0.00362480729594771" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/wheel1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_re1"
+    type="continuous">
+    <origin
+      xyz="0.038 0 -4.06063573736665E-05"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="base_link0" />
+    <child
+      link="wheel1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="wheel2">
+    <inertial>
+      <origin
+        xyz="1.03209863247143E-05 7.93101198348749E-17 -0.00122106368470842"
+        rpy="0 0 0" />
+      <mass
+        value="0.162807208863699" />
+      <inertia
+        ixx="0.00181549978921057"
+        ixy="-2.18751339988067E-18"
+        ixz="8.53429402276014E-09"
+        iyy="0.00181549982536503"
+        iyz="-2.66017879014022E-18"
+        izz="0.00362480729594773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_re2"
+    type="continuous">
+    <origin
+      xyz="-0.04 0 -4.54952400428741E-05"
+      rpy="3.14159265358979 -1.5707963267949 0" />
+    <parent
+      link="base_link0" />
+    <child
+      link="wheel2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="foot10">
+    <inertial>
+      <origin
+        xyz="-0.0364998055853478 -0.0201791962952851 0.0393769541906813"
+        rpy="0 0 0" />
+      <mass
+        value="0.0555141043554309" />
+      <inertia
+        ixx="6.36843779043018E-05"
+        ixy="-1.79308926580314E-08"
+        ixz="5.74001723262844E-06"
+        iyy="3.75373705544821E-05"
+        iyz="3.530511735445E-08"
+        izz="4.18952031197167E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re10"
+    type="continuous">
+    <origin
+      xyz="0.0779999999018676 -0.0199999999999988 -0.128000000080715"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="base_link0" />
+    <child
+      link="foot10" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="foot11">
+    <inertial>
+      <origin
+        xyz="0.00118918242163793 0.00840513920933102 -0.0152443183708235"
+        rpy="0 0 0" />
+      <mass
+        value="0.011272090543252" />
+      <inertia
+        ixx="4.34882142011447E-06"
+        ixy="4.74633962197037E-07"
+        ixz="-1.32354564165582E-06"
+        iyy="4.23005000512135E-06"
+        iyz="1.05971132256461E-06"
+        izz="2.25417296735574E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re11"
+    type="continuous">
+    <origin
+      xyz="-0.0574330127600885 -0.0452000000771286 0.0527500000906872"
+      rpy="-3.1415926533426 0.523598784293071 -3.14159265309541" />
+    <parent
+      link="foot10" />
+    <child
+      link="foot11" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="foot12">
+    <inertial>
+      <origin
+        xyz="-0.0176749436470422 -0.0630855837630193 -0.00925365803538597"
+        rpy="0 0 0" />
+      <mass
+        value="0.10916330558266" />
+      <inertia
+        ixx="0.000247796501433723"
+        ixy="1.56483243826473E-05"
+        ixz="1.46150194923993E-06"
+        iyy="5.00224152904236E-05"
+        iyz="-6.07245365773293E-05"
+        izz="0.000227633558083589" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re12"
+    type="continuous">
+    <origin
+      xyz="-0.01433974407594 0.0119999999958751 -0.043971140527557"
+      rpy="2.0562583606008 9.6909593482918E-09 1.57079633233573" />
+    <parent
+      link="foot11" />
+    <child
+      link="foot12" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot130">
+    <inertial>
+      <origin
+        xyz="-0.0161047379365589 -0.0703154018588947 -0.118825985425476"
+        rpy="0 0 0" />
+      <mass
+        value="0.0890622032349928" />
+      <inertia
+        ixx="0.000458332700700983"
+        ixy="2.95355966646799E-05"
+        ixz="2.96987019370773E-05"
+        iyy="0.000436062799439686"
+        iyz="-1.56412220789116E-05"
+        izz="0.000107866045194191" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot130.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot130.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re130"
+    type="continuous">
+    <origin
+      xyz="-0.0089999984374722 -0.139143611896511 -0.0513425319721627"
+      rpy="3.14159265358979 1.53265957630772 1.57079633775183" />
+    <parent
+      link="foot12" />
+    <child
+      link="foot130" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="foot131">
+    <inertial>
+      <origin
+        xyz="0.016898091729692 -0.00624999978166453 -0.0224391345157634"
+        rpy="0 0 0" />
+      <mass
+        value="0.00793203711002206" />
+      <inertia
+        ixx="2.60058938322836E-06"
+        ixy="-1.75954532342174E-14"
+        ixz="1.8222369080421E-06"
+        iyy="4.05815808224144E-06"
+        iyz="2.44764884510908E-14"
+        izz="1.5530836458796E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot131.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot131.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re131"
+    type="continuous">
+    <origin
+      xyz="-0.0399999988918239 -0.0987834622902894 -0.0337909377960114"
+      rpy="3.14159265358979 1.53265957630772 1.57079633775183" />
+    <parent
+      link="foot12" />
+    <child
+      link="foot131" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="foot132">
+    <inertial>
+      <origin
+        xyz="-0.00400000000000002 0.00485487676542894 -0.0326409278604714"
+        rpy="0 0 0" />
+      <mass
+        value="0.00704964418718946" />
+      <inertia
+        ixx="3.32114514170302E-06"
+        ixy="-7.02513799811767E-23"
+        ixz="3.31711157178716E-22"
+        iyy="3.20650438190996E-06"
+        iyz="4.58837210721986E-07"
+        izz="1.89836964456418E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot132.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot132.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re132"
+    type="continuous">
+    <origin
+      xyz="0.0391017245834569 -0.0184999994948159 -0.0519235488873236"
+      rpy="-1.71482872133985 1.09231997338156E-08 -1.57079632837916" />
+    <parent
+      link="foot131" />
+    <child
+      link="foot132" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="foot133">
+    <inertial>
+      <origin
+        xyz="0.0208154026970013 0.0215519638377631 0.0301992700093149"
+        rpy="0 0 0" />
+      <mass
+        value="0.0890622032349928" />
+      <inertia
+        ixx="0.000436062799191566"
+        ixy="-1.12398754156044E-05"
+        ixz="-3.1474825353347E-05"
+        iyy="0.000123523774974536"
+        iyz="-7.82582931724008E-05"
+        izz="0.000442674971168758" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot133.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot133.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re133"
+    type="continuous">
+    <origin
+      xyz="0 0.00970975353085788 -0.0652818557209428"
+      rpy="0 0 0" />
+    <parent
+      link="foot132" />
+    <child
+      link="foot133" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="foot21">
+    <inertial>
+      <origin
+        xyz="0.000273881636067425 0.00865176735725234 0.0169386591996159"
+        rpy="0 0 0" />
+      <mass
+        value="0.0119788315412312" />
+      <inertia
+        ixx="4.92814345357187E-06"
+        ixy="5.17742557750124E-07"
+        ixz="1.62037857720931E-06"
+        iyy="4.97488036293264E-06"
+        iyz="-1.13963452609378E-06"
+        izz="2.4449725189846E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re21"
+    type="continuous">
+    <origin
+      xyz="-0.0574330171796816 0.00479999979332649 0.0527500072839604"
+      rpy="5.0839055043723E-09 0.523598784293072 -3.14159264342198" />
+    <parent
+      link="foot10" />
+    <child
+      link="foot21" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="foot22">
+    <inertial>
+      <origin
+        xyz="-0.0176751244669035 -0.063602757743947 0.00448335630583022"
+        rpy="0 0 0" />
+      <mass
+        value="0.109161602016911" />
+      <inertia
+        ixx="0.000247797737535849"
+        ixy="1.57141977654333E-05"
+        ixz="-2.8103680932955E-07"
+        iyy="4.19200854962888E-05"
+        iyz="4.67196346658706E-05"
+        izz="0.000235736713987056" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re22"
+    type="continuous">
+    <origin
+      xyz="-0.0143397441848493 0.0119999999946302 0.0439711320906185"
+      rpy="-2.1315356763959 -9.50507177220965E-09 1.57079632395831" />
+    <parent
+      link="foot21" />
+    <child
+      link="foot22" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="foot230">
+    <inertial>
+      <origin
+        xyz="0.0703176034070182 0.119872852216277 -0.0032456666132622"
+        rpy="0 0 0" />
+      <mass
+        value="0.089058496821403" />
+      <inertia
+        ixx="0.000436032424291995"
+        ixy="-1.06788045667388E-05"
+        ixz="3.16695047087249E-05"
+        iyy="0.00012640304116681"
+        iyz="8.38886729452962E-05"
+        izz="0.000439759784767607" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot230.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot230.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re230"
+    type="continuous">
+    <origin
+      xyz="-0.00899999843747451 -0.142610836080339 0.0407326619972927"
+      rpy="-3.01696383443525 -2.76848137302838E-09 -3.14159262026724" />
+    <parent
+      link="foot22" />
+    <child
+      link="foot230" />
+    <axis
+      xyz="0.999999999999999 0 0" />
+  </joint>
+  <link
+    name="foot231">
+    <inertial>
+      <origin
+        xyz="0.00578663004334556 -0.0155159626151743 -0.0206037922244977"
+        rpy="0 0 0" />
+      <mass
+        value="0.00863860619493619" />
+      <inertia
+        ixx="4.60582357900598E-06"
+        ixy="6.21083902049044E-08"
+        ixz="8.24743139046323E-08"
+        iyy="2.96700571496884E-06"
+        iyz="-2.06823937188349E-06"
+        izz="1.77808646058056E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot231.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot231.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re231"
+    type="continuous">
+    <origin
+      xyz="-0.0399999988918194 -0.101044996980018 0.026266109047571"
+      rpy="-1.60793689210283 2.00164508551207E-09 3.14159265354119" />
+    <parent
+      link="foot22" />
+    <child
+      link="foot231" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot232">
+    <inertial>
+      <origin
+        xyz="-0.004 -0.00708869570181853 -0.0322296508396697"
+        rpy="0 0 0" />
+      <mass
+        value="0.00704964418718947" />
+      <inertia
+        ixx="3.32114514170303E-06"
+        ixy="2.27508905015369E-23"
+        ixz="1.5809469657011E-22"
+        iyy="3.12925408769717E-06"
+        iyz="-6.61515248144455E-07"
+        izz="2.67087258669217E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot232.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot232.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re232"
+    type="continuous">
+    <origin
+      xyz="0.0185000000000392 -0.0391017246127665 -0.0519235486852441"
+      rpy="1.78367153659083 -1.33224752856499E-14 -3.63042932687885E-14" />
+    <parent
+      link="foot231" />
+    <child
+      link="foot232" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot233">
+    <inertial>
+      <origin
+        xyz="0.0208176069601055 -0.0194278421434326 0.0316119456625289"
+        rpy="0 0 0" />
+      <mass
+        value="0.089058496821403" />
+      <inertia
+        ixx="0.000436032423609174"
+        ixy="9.04708061585291E-06"
+        ixz="-3.21736713614188E-05"
+        iyy="0.000135780234085583"
+        iyz="9.94373367574579E-05"
+        izz="0.000430382592531655" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot233.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot233.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re233"
+    type="continuous">
+    <origin
+      xyz="0 -0.0141773914036371 -0.0644593016793394"
+      rpy="0 4.13590306276514E-25 0" />
+    <parent
+      link="foot232" />
+    <child
+      link="foot233" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot30">
+    <inertial>
+      <origin
+        xyz="-0.020178814286165 -0.03649970517219 0.0393778194204265"
+        rpy="0 0 0" />
+      <mass
+        value="0.0555116363708182" />
+      <inertia
+        ixx="3.75354799484112E-05"
+        ixy="-1.87986604874322E-08"
+        ixz="3.65930859755402E-08"
+        iyy="6.36826331150098E-05"
+        iyz="5.73966657725984E-06"
+        izz="4.18943813527588E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot30.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot30.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re30"
+    type="continuous">
+    <origin
+      xyz="-0.0779999999018841 -0.0200000000000044 -0.128000000080711"
+      rpy="-1.13935575444627E-27 -1.96769920517305E-14 -1.57079632679484" />
+    <parent
+      link="base_link0" />
+    <child
+      link="foot30" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot41">
+    <inertial>
+      <origin
+        xyz="0.000273197563149807 -0.00865167443676584 0.0169387739336998"
+        rpy="0 0 0" />
+      <mass
+        value="0.0119786596281688" />
+      <inertia
+        ixx="4.92805017795387E-06"
+        ixy="-5.17788946791034E-07"
+        ixz="1.62015163689636E-06"
+        iyy="4.97481655007867E-06"
+        iyz="1.13954320498524E-06"
+        izz="2.44505014699804E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot41.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot41.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re41"
+    type="continuous">
+    <origin
+      xyz="0.00479999910719571 -0.0574330222969366 0.0527500139199335"
+      rpy="1.25576976108112E-08 0.523598784375025 -1.57079630167953" />
+    <parent
+      link="foot30" />
+    <child
+      link="foot41" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot42">
+    <inertial>
+      <origin
+        xyz="0.0176749436470342 0.0121131626217559 -0.062599459718598"
+        rpy="0 0 0" />
+      <mass
+        value="0.109163305582642" />
+      <inertia
+        ixx="0.000247796501433588"
+        ixy="3.7916745198478E-06"
+        ixz="-1.52521883107749E-05"
+        iyy="0.00024611715245978"
+        iyz="7.93308019341105E-06"
+        izz="3.15388209140859E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot42.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot42.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re42"
+    type="continuous">
+    <origin
+      xyz="-0.0143397431731468 -0.0119999935271351 0.0439711297506678"
+      rpy="2.3193446601794 2.79299024606319E-08 1.57079633098806" />
+    <parent
+      link="foot41" />
+    <child
+      link="foot42" />
+    <axis
+      xyz="0.999999999999999 0 0" />
+  </joint>
+  <link
+    name="foot430">
+    <inertial>
+      <origin
+        xyz="0.0383154017328526 0.0158815730762303 0.118856018089647"
+        rpy="0 0 0" />
+      <mass
+        value="0.0890622032347055" />
+      <inertia
+        ixx="0.00043606279941257"
+        ixy="2.95649163305943E-05"
+        ixz="-1.55857312672982E-05"
+        iyy="0.000458219926092464"
+        iyz="3.0356612527702E-05"
+        izz="0.000107978819816286" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot430.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot430.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re430"
+    type="continuous">
+    <origin
+      xyz="0.0410000021072509 -0.00247744863659816 -0.148293168653835"
+      rpy="0.296771297654271 2.11869365657106E-08 -3.11628427149921E-08" />
+    <parent
+      link="foot42" />
+    <child
+      link="foot430" />
+    <axis
+      xyz="0.999999999999995 0 0" />
+  </joint>
+  <link
+    name="foot431">
+    <inertial>
+      <origin
+        xyz="-0.00424999999999998 -0.0202095125089549 0.0195098939066535"
+        rpy="0 0 0" />
+      <mass
+        value="0.00793203711002207" />
+      <inertia
+        ixx="4.05815808224144E-06"
+        ixy="1.23604633620486E-22"
+        ixz="-1.02309331906323E-22"
+        iyy="2.01006439972787E-06"
+        iyz="1.89483664234074E-06"
+        izz="2.14360862938009E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot431.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot431.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re431"
+    type="continuous">
+    <origin
+      xyz="0.0505000030338873 0.000750902824356664 -0.104400370242186"
+      rpy="0.141097570434059 1.00313561013763E-08 -3.25024284604319E-08" />
+    <parent
+      link="foot42" />
+    <child
+      link="foot431" />
+    <axis
+      xyz="0.999999999999995 0 0" />
+  </joint>
+  <link
+    name="foot432">
+    <inertial>
+      <origin
+        xyz="-0.00400000000000003 0.0325723134570516 0.00529569599350059"
+        rpy="0 0 0" />
+      <mass
+        value="0.00704964418718947" />
+      <inertia
+        ixx="3.32114514170303E-06"
+        ixy="3.45281182702234E-22"
+        ixz="5.50994729836634E-23"
+        iyy="2.02792906699002E-07"
+        iyz="-4.99447192733479E-07"
+        izz="3.19354843966738E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot432.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot432.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re432"
+    type="continuous">
+    <origin
+      xyz="0.00800000000005502 -0.0467642616994829 0.0451453633023117"
+      rpy="6.56580732005807E-08 4.6834926280298E-15 6.39210780030601E-14" />
+    <parent
+      link="foot431" />
+    <child
+      link="foot432" />
+    <axis
+      xyz="0.999999999999995 0 0" />
+  </joint>
+  <link
+    name="foot433">
+    <inertial>
+      <origin
+        xyz="0.0208154026973695 -0.030487864855888 0.0211417395427129"
+        rpy="0 0 0" />
+      <mass
+        value="0.0890622032347055" />
+      <inertia
+        ixx="0.000436062799184979"
+        ixy="3.16238976207515E-05"
+        ixz="-1.0813349606944E-05"
+        iyy="0.000440500937366361"
+        iyz="8.2543803602479E-05"
+        izz="0.00012569780876998" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot433.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot433.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re433"
+    type="continuous">
+    <origin
+      xyz="0 0.0651446269141031 0.0105913919870012"
+      rpy="0 -3.30872245021211E-24 1.07533479631894E-23" />
+    <parent
+      link="foot432" />
+    <child
+      link="foot433" />
+    <axis
+      xyz="0.999999999999995 0 0" />
+  </joint>
+  <link
+    name="foot31">
+    <inertial>
+      <origin
+        xyz="0.000273881569176987 0.00865176694514362 0.0169386588279008"
+        rpy="0 0 0" />
+      <mass
+        value="0.0119788315458601" />
+      <inertia
+        ixx="4.9281436867505E-06"
+        ixy="5.17742523634712E-07"
+        ixz="1.62037858024457E-06"
+        iyy="4.97488060443403E-06"
+        iyz="-1.13963455943706E-06"
+        izz="2.4449725177326E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot31.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot31.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re31"
+    type="continuous">
+    <origin
+      xyz="-0.0451999969971262 -0.0574330183192363 0.0527500067266616"
+      rpy="1.73944251357435E-08 0.523598784375031 -1.57079629200607" />
+    <parent
+      link="foot30" />
+    <child
+      link="foot31" />
+    <axis
+      xyz="0.999999999999999 0 0" />
+  </joint>
+  <link
+    name="foot32">
+    <inertial>
+      <origin
+        xyz="-0.0176751244669041 -0.0544220225962004 -0.0332212993866702"
+        rpy="0 0 0" />
+      <mass
+        value="0.109161602016912" />
+      <inertia
+        ixx="0.00024779773753586"
+        ixy="1.29666714103152E-05"
+        ixz="8.88146528655752E-06"
+        iyy="6.29269581889214E-05"
+        iyz="-7.62424868653227E-05"
+        izz="0.000214729841294438" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot32.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot32.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re32"
+    type="continuous">
+    <origin
+      xyz="-0.0143397443736736 0.0119999986355285 0.0439711324685769"
+      rpy="-2.74996879463057 -5.27199719703999E-09 1.57079630943337" />
+    <parent
+      link="foot31" />
+    <child
+      link="foot32" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot330">
+    <inertial>
+      <origin
+        xyz="0.0703176138422589 -0.0163215246197098 0.118800847732444"
+        rpy="0 0 0" />
+      <mass
+        value="0.0890584968216805" />
+      <inertia
+        ixx="0.000436032424290283"
+        ixy="-2.9507360580851E-05"
+        ixz="-1.56942686053947E-05"
+        iyy="0.000458408591662587"
+        iyz="-2.90826760806823E-05"
+        izz="0.000107754234269795" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot330.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot330.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re330"
+    type="continuous">
+    <origin
+      xyz="-0.00899999843747453 -0.139812714845492 -0.049491464804066"
+      rpy="0.913391935739451 -5.66896538267249E-08 -3.14159259601572" />
+    <parent
+      link="foot32" />
+    <child
+      link="foot330" />
+    <axis
+      xyz="-0.999999999999995 0 0" />
+  </joint>
+  <link
+    name="foot331">
+    <inertial>
+      <origin
+        xyz="-0.00471337029544247 0.0185227124105031 0.0179491108996709"
+        rpy="0 0 0" />
+      <mass
+        value="0.00863860619493619" />
+      <inertia
+        ixx="4.60582342139282E-06"
+        ixy="-7.41440661317372E-08"
+        ixz="-7.18479952802838E-08"
+        iyy="2.30487338651059E-06"
+        iyz="-2.15091060266156E-06"
+        izz="2.44021869232174E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot331.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot331.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re331"
+    type="continuous">
+    <origin
+      xyz="-0.0505000080960214 -0.0975582637637435 -0.0371804653052983"
+      rpy="1.07088804214659 -6.18425080678096E-08 -3.14159260600019" />
+    <parent
+      link="foot32" />
+    <child
+      link="foot331" />
+    <axis
+      xyz="-0.999999999999995 0 0" />
+  </joint>
+  <link
+    name="foot332">
+    <inertial>
+      <origin
+        xyz="-0.004 -0.0325822444682183 0.00523424735881462"
+        rpy="0 0 0" />
+      <mass
+        value="0.00704964418718946" />
+      <inertia
+        ixx="3.32114514170303E-06"
+        ixy="-2.66706634650849E-22"
+        ixz="3.39153233487678E-23"
+        iyy="2.00919395913321E-07"
+        iyz="4.93802364856972E-07"
+        izz="3.19542195045306E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot332.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot332.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re332"
+    type="continuous">
+    <origin
+      xyz="0.00800000000005496 0.0466790235781586 0.0452334915497924"
+      rpy="-6.73976650877873E-08 4.74921476144021E-15 -6.39035238203255E-14" />
+    <parent
+      link="foot331" />
+    <child
+      link="foot332" />
+    <axis
+      xyz="-0.999999999999995 0 0" />
+  </joint>
+  <link
+    name="foot333">
+    <inertial>
+      <origin
+        xyz="0.0208176067792103 0.0304493675220227 0.0212035907672144"
+        rpy="0 0 0" />
+      <mass
+        value="0.0890584968216806" />
+      <inertia
+        ixx="0.000436032424062716"
+        ixy="-3.16037313185803E-05"
+        ixz="-1.08719223657577E-05"
+        iyy="0.000440772216869467"
+        iyz="-8.19697013475379E-05"
+        izz="0.000125390609290481" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot333.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/foot333.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_re333"
+    type="continuous">
+    <origin
+      xyz="0 -0.0651644889364366 0.0104684947176293"
+      rpy="-2.77555756156289E-17 0 -4.3426982159034E-24" />
+    <parent
+      link="foot332" />
+    <child
+      link="foot333" />
+    <axis
+      xyz="-0.999999999999995 0 0" />
+  </joint>
+  <link
+    name="fly00">
+    <inertial>
+      <origin
+        xyz="-1.86200269087321E-18 -6.69369084086522E-18 0.00372818247501912"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149165929307992" />
+      <inertia
+        ixx="2.81705997712243E-06"
+        ixy="3.30455725474894E-22"
+        ixz="1.71290002570524E-22"
+        iyy="2.78486395566149E-06"
+        iyz="-5.32492003519503E-22"
+        izz="5.22358275980823E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly00.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly00.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_pr00"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.0601692709922874"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="base_link0" />
+    <child
+      link="fly00" />
+    <axis
+      xyz="0 0 1" />
+   <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <link
+    name="fly01">
+    <inertial>
+      <origin
+        xyz="-0.0144999999999987 -0.0106653645038527 -0.00699999999999879"
+        rpy="0 0 0" />
+      <mass
+        value="0.00190995574287564" />
+      <inertia
+        ixx="1.06820940668435E-07"
+        ixy="-1.16952702990974E-07"
+        ixz="-3.21276949915596E-21"
+        iyy="1.79799262448452E-07"
+        iyz="-2.72638729897478E-21"
+        izz="2.78662054188238E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly01.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly01.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re01"
+    type="continuous">
+    <origin
+      xyz="-0.0173241161390704 -0.00742462120245876 0.01"
+      rpy="-1.5707963267949 0 0.785398163397449" />
+    <parent
+      link="fly00" />
+    <child
+      link="fly01" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="fly011">
+    <inertial>
+      <origin
+        xyz="-0.0571576264001395 -0.0139277316226705 -0.00269571545852544"
+        rpy="0 0 0" />
+      <mass
+        value="0.0618238302728455" />
+      <inertia
+        ixx="1.59855728428626E-05"
+        ixy="1.00611978932637E-05"
+        ixz="-8.79589818405293E-06"
+        iyy="0.000384511246644149"
+        iyz="1.42944607167839E-06"
+        izz="0.000378845501044351" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly011.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly011.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re011"
+    type="continuous">
+    <origin
+      xyz="-0.0290000000000145 -0.0213307290077559 -0.00100000000015494"
+      rpy="-3.00972446453705E-14 -2.29871677248639E-13 3.00972446453774E-14" />
+    <parent
+      link="fly01" />
+    <child
+      link="fly011" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="fly012">
+    <inertial>
+      <origin
+        xyz="0.0219258214324333 0.0232923321030922 0.300209915335201"
+        rpy="0 0 0" />
+      <mass
+        value="0.135433125107076" />
+      <inertia
+        ixx="0.000561922446552681"
+        ixy="-2.3413130807388E-07"
+        ixz="-1.36220763108438E-06"
+        iyy="0.000560874491991706"
+        iyz="-6.86149351607036E-05"
+        izz="4.95915405805575E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly012.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly012.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_pr012"
+    type="prismatic">
+    <origin
+      xyz="0.0165999999999953 -0.0219999999999932 0.015999999999919"
+      rpy="-1.57079632679487 1.57079630572147 1.57079632679487" />
+    <parent
+      link="fly011" />
+    <child
+      link="fly012" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <link
+    name="fly013">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 -5.55111512312578E-17 0.0198229891235514"
+        rpy="0 0 0" />
+      <mass
+        value="0.0288269752279934" />
+      <inertia
+        ixx="8.30042087980774E-06"
+        ixy="2.50735561554064E-07"
+        ixz="-6.17525034586867E-21"
+        iyy="8.30042087980763E-06"
+        iyz="-1.91286056494287E-21"
+        izz="1.09604806281821E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly013.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly013.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re013"
+    type="continuous">
+    <origin
+      xyz="0.0219999999998283 0.0355232009887402 0.342099999999794"
+      rpy="-1.57079632679507 0.785398163397218 -1.74493176037699E-12" />
+    <parent
+      link="fly012" />
+    <child
+      link="fly013" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly0141">
+    <inertial>
+      <origin
+        xyz="-0.0654874636139443 0.0438405484892653 -0.0059502384297089"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174870156064026" />
+      <inertia
+        ixx="1.28342928899753E-05"
+        ixy="1.87004069799485E-05"
+        ixz="-1.10473146057048E-07"
+        iyy="3.20840637867587E-05"
+        iyz="2.70306652387725E-07"
+        izz="4.48301855542646E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0141.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0141.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re0141"
+    type="continuous">
+    <origin
+      xyz="-0.0129223764261827 0.0129223764261857 0.04088"
+      rpy="0 0 0" />
+    <parent
+      link="fly013" />
+    <child
+      link="fly0141" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly0142">
+    <inertial>
+      <origin
+        xyz="0.0703667688727377 -0.0354841222877348 -0.00595022650714011"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174869821130905" />
+      <inertia
+        ixx="8.57428123194371E-06"
+        ixy="1.5797271590434E-05"
+        ixz="1.42772183004305E-07"
+        iyy="3.63440740394588E-05"
+        iyz="-2.54730171516491E-07"
+        izz="4.48301839983647E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0142.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0142.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re0142"
+    type="continuous">
+    <origin
+      xyz="0.0129223764261827 -0.0129223764261856 0.04088"
+      rpy="0 0 0" />
+    <parent
+      link="fly013" />
+    <child
+      link="fly0142" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly02">
+    <inertial>
+      <origin
+        xyz="-0.0144999999999963 -0.0106653645038597 -0.0070000000000033"
+        rpy="0 0 0" />
+      <mass
+        value="0.00190995574287564" />
+      <inertia
+        ixx="1.06820940668508E-07"
+        ixy="-1.16952702990997E-07"
+        ixz="-3.7156953115882E-21"
+        iyy="1.79799262448378E-07"
+        iyz="-3.12343399300023E-21"
+        izz="2.78662054188238E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly02.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly02.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re02"
+    type="continuous">
+    <origin
+      xyz="-0.00742462120245875 0.0173241161390704 0.01"
+      rpy="-1.5707963267949 0 -0.785398163397448" />
+    <parent
+      link="fly00" />
+    <child
+      link="fly02" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly021">
+    <inertial>
+      <origin
+        xyz="-0.0571576264001367 -0.013927731622682 -0.00269571545852549"
+        rpy="0 0 0" />
+      <mass
+        value="0.0618238302728455" />
+      <inertia
+        ixx="1.59855728428585E-05"
+        ixy="1.00611978931892E-05"
+        ixz="-8.79589818405328E-06"
+        iyy="0.000384511246644153"
+        iyz="1.42944607167661E-06"
+        izz="0.000378845501044351" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly021.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly021.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re021"
+    type="continuous">
+    <origin
+      xyz="-0.0289999999999967 -0.0213307290077376 -0.00100000000015069"
+      rpy="-3.07099635794471E-14 -2.36755060001315E-13 -3.07099635794398E-14" />
+    <parent
+      link="fly02" />
+    <child
+      link="fly021" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly022">
+    <inertial>
+      <origin
+        xyz="0.0219258214324908 0.0232923321030201 0.300209915335203"
+        rpy="0 0 0" />
+      <mass
+        value="0.135433125107076" />
+      <inertia
+        ixx="0.00056192244655268"
+        ixy="-2.34131308075786E-07"
+        ixz="-1.36220763122337E-06"
+        iyy="0.000560874491991706"
+        iyz="-6.86149351607008E-05"
+        izz="4.95915405805574E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly022.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly022.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_pr022"
+    type="prismatic">
+    <origin
+      xyz="0.0165999999999998 -0.0219999999999898 0.015999999999919"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="fly021" />
+    <child
+      link="fly022" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <link
+    name="fly023">
+    <inertial>
+      <origin
+        xyz="0 0 0.0198229891235514"
+        rpy="0 0 0" />
+      <mass
+        value="0.0288269752279933" />
+      <inertia
+        ixx="8.3004208798076E-06"
+        ixy="-2.50735561554063E-07"
+        ixz="8.46299161661411E-21"
+        iyy="8.30042087980772E-06"
+        iyz="5.98067979260083E-21"
+        izz="1.0960480628182E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly023.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly023.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re023"
+    type="continuous">
+    <origin
+      xyz="0.0219999999999108 0.035523200988668 0.342099999999796"
+      rpy="1.57079632679507 0.785398163397685 3.14159265358624" />
+    <parent
+      link="fly022" />
+    <child
+      link="fly023" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly0241">
+    <inertial>
+      <origin
+        xyz="0.0438405481090783 0.0654874631857417 -0.00595023839934394"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174870158250146" />
+      <inertia
+        ixx="3.20840640828562E-05"
+        ixy="-1.8700407236614E-05"
+        ixz="2.70306670289065E-07"
+        iyy="1.28342931157139E-05"
+        iyz="1.10473166494798E-07"
+        izz="4.48301860728713E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0241.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0241.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re0241"
+    type="continuous">
+    <origin
+      xyz="0.0129223764261855 0.0129223764261827 0.04088"
+      rpy="0 0 0" />
+    <parent
+      link="fly023" />
+    <child
+      link="fly0241" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly0242">
+    <inertial>
+      <origin
+        xyz="-0.0354841226142339 -0.0703667693482801 -0.0059502265377166"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174869818929815" />
+      <inertia
+        ixx="3.63440736788385E-05"
+        ixy="-1.57972713484027E-05"
+        ixz="-2.54730156166789E-07"
+        iyy="8.57428106684797E-06"
+        iyz="-1.42772160346485E-07"
+        izz="4.48301834759005E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0242.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0242.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re0242"
+    type="continuous">
+    <origin
+      xyz="-0.0129223764261856 -0.0129223764261827 0.04088"
+      rpy="0 0 0" />
+    <parent
+      link="fly023" />
+    <child
+      link="fly0242" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly03">
+    <inertial>
+      <origin
+        xyz="0.0145000000000078 0.0106653645038575 -0.00699999999999853"
+        rpy="0 0 0" />
+      <mass
+        value="0.00190995574287564" />
+      <inertia
+        ixx="1.06820940668499E-07"
+        ixy="-1.16952702990994E-07"
+        ixz="-3.20946077670575E-21"
+        iyy="1.79799262448388E-07"
+        iyz="-2.76609196837732E-21"
+        izz="2.78662054188238E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly03.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly03.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re03"
+    type="continuous">
+    <origin
+      xyz="0.00742462120245875 -0.0173241161390704 0.01"
+      rpy="1.5707963267949 0 -0.785398163397448" />
+    <parent
+      link="fly00" />
+    <child
+      link="fly03" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="fly031">
+    <inertial>
+      <origin
+        xyz="0.0571576264001357 0.013927731622686 -0.00269571545852543"
+        rpy="0 0 0" />
+      <mass
+        value="0.0618238302728455" />
+      <inertia
+        ixx="1.59855728428572E-05"
+        ixy="1.00611978931635E-05"
+        ixz="8.79589818405324E-06"
+        iyy="0.000384511246644155"
+        iyz="-1.42944607167599E-06"
+        izz="0.00037884550104435" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly031.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly031.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re031"
+    type="continuous">
+    <origin
+      xyz="0.0289999999999947 0.0213307290076976 -0.000999999999861778"
+      rpy="7.66517785473267E-15 5.26800825184637E-14 -7.66517785473226E-15" />
+    <parent
+      link="fly03" />
+    <child
+      link="fly031" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="fly032">
+    <inertial>
+      <origin
+        xyz="0.0219258214327247 0.0232923321030787 0.299209915335241"
+        rpy="0 0 0" />
+      <mass
+        value="0.135433125107076" />
+      <inertia
+        ixx="0.000561922446552682"
+        ixy="-2.34131308081286E-07"
+        ixz="-1.36220763094325E-06"
+        iyy="0.000560874491991701"
+        iyz="-6.86149351607194E-05"
+        izz="4.95915405805608E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly032.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly032.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_pr032"
+    type="prismatic">
+    <origin
+      xyz="-0.0156000000000013 0.0219999999999889 0.0159999999999193"
+      rpy="1.57040033081946 1.57079630572147 1.57040033081947" />
+    <parent
+      link="fly031" />
+    <child
+      link="fly032" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <link
+    name="fly033">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 0 0.0198229891235514"
+        rpy="0 0 0" />
+      <mass
+        value="0.0288269752279934" />
+      <inertia
+        ixx="8.30042087980761E-06"
+        ixy="-2.50735561554064E-07"
+        ixz="3.93790676248771E-21"
+        iyy="8.30042087980774E-06"
+        iyz="-7.26342235408824E-21"
+        izz="1.09604806281821E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly033.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly033.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re033"
+    type="continuous">
+    <origin
+      xyz="0.0220000000000868 0.0355232009887279 0.341099999999834"
+      rpy="-1.5707963267951 -0.785398163397501 1.74282547521099E-12" />
+    <parent
+      link="fly032" />
+    <child
+      link="fly033" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly0341">
+    <inertial>
+      <origin
+        xyz="-0.0438405481090801 -0.0654874631857413 -0.00595023839934389"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174870158250148" />
+      <inertia
+        ixx="3.20840640828561E-05"
+        ixy="-1.8700407236615E-05"
+        ixz="-2.70306670289053E-07"
+        iyy="1.28342931157151E-05"
+        iyz="-1.1047316649479E-07"
+        izz="4.48301860728725E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0341.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0341.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re0341"
+    type="continuous">
+    <origin
+      xyz="-0.0129223764261858 -0.0129223764261824 0.04088"
+      rpy="0 0 0" />
+    <parent
+      link="fly033" />
+    <child
+      link="fly0341" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly0342">
+    <inertial>
+      <origin
+        xyz="0.0354841224228126 0.0703667690679587 -0.00595022651726582"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174869820226907" />
+      <inertia
+        ixx="3.63440738915775E-05"
+        ixy="-1.57972714903604E-05"
+        ixz="2.54730166371493E-07"
+        iyy="8.57428116329378E-06"
+        iyz="1.42772175464524E-07"
+        izz="4.48301837829605E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0342.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0342.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re0342"
+    type="continuous">
+    <origin
+      xyz="0.0129223764261859 0.0129223764261824 0.04088"
+      rpy="0 0 0" />
+    <parent
+      link="fly033" />
+    <child
+      link="fly0342" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly04">
+    <inertial>
+      <origin
+        xyz="0.0145000000000082 0.0106653645038544 -0.00700000000000079"
+        rpy="0 0 0" />
+      <mass
+        value="0.00190995574287564" />
+      <inertia
+        ixx="1.06820940668393E-07"
+        ixy="-1.16952702990961E-07"
+        ixz="-2.61719945811778E-21"
+        iyy="1.79799262448494E-07"
+        iyz="-2.3227231600489E-21"
+        izz="2.78662054188238E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly04.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly04.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re04"
+    type="continuous">
+    <origin
+      xyz="0.0173241161390704 0.00742462120245876 0.01"
+      rpy="1.5707963267949 0 0.785398163397449" />
+    <parent
+      link="fly00" />
+    <child
+      link="fly04" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly041">
+    <inertial>
+      <origin
+        xyz="0.0571576264001359 0.0139277316226852 -0.00269571545852545"
+        rpy="0 0 0" />
+      <mass
+        value="0.0618238302728456" />
+      <inertia
+        ixx="1.59855728428574E-05"
+        ixy="1.00611978931691E-05"
+        ixz="8.79589818405328E-06"
+        iyy="0.000384511246644155"
+        iyz="-1.42944607167613E-06"
+        izz="0.000378845501044351" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly041.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly041.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re041"
+    type="continuous">
+    <origin
+      xyz="0.0290000000000231 0.021330729007757 -0.00100000000014934"
+      rpy="3.11450542399179E-14 2.30704344517108E-13 3.11450542399251E-14" />
+    <parent
+      link="fly04" />
+    <child
+      link="fly041" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly042">
+    <inertial>
+      <origin
+        xyz="0.0219258214323954 0.0232923321030828 0.300209915335201"
+        rpy="0 0 0" />
+      <mass
+        value="0.135433125107076" />
+      <inertia
+        ixx="0.000561922446552682"
+        ixy="-2.34131308071421E-07"
+        ixz="-1.36220763090587E-06"
+        iyy="0.000560874491991704"
+        iyz="-6.86149351607071E-05"
+        izz="4.95915405805574E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly042.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly042.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_pr042"
+    type="prismatic">
+    <origin
+      xyz="-0.016600000000001 0.0219999999999889 0.015999999999919"
+      rpy="-1.57042081148916 1.57079631189374 -1.57042081148922" />
+    <parent
+      link="fly041" />
+    <child
+      link="fly042" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <link
+    name="fly043">
+    <inertial>
+      <origin
+        xyz="1.2490009027033E-14 -8.32667268468867E-15 0.0198229891235514"
+        rpy="0 0 0" />
+      <mass
+        value="0.0288269752279934" />
+      <inertia
+        ixx="8.30042087980773E-06"
+        ixy="2.50735561554066E-07"
+        ixz="1.77689617383195E-18"
+        iyy="8.30042087980762E-06"
+        iyz="-1.28372073926551E-18"
+        izz="1.09604806281821E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly043.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly043.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re043"
+    type="continuous">
+    <origin
+      xyz="0.0219999999997584 0.0355232009887311 0.342099999999794"
+      rpy="1.57079632679527 -0.785398163397217 3.14159265358979" />
+    <parent
+      link="fly042" />
+    <child
+      link="fly043" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly0431">
+    <inertial>
+      <origin
+        xyz="0.0654874636819158 -0.0438405485502552 -0.00595023843293649"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174870155716398" />
+      <inertia
+        ixx="1.28342928535357E-05"
+        ixy="1.87004069388472E-05"
+        ixz="1.10473143931596E-07"
+        iyy="3.20840637398965E-05"
+        iyz="-2.70306650499644E-07"
+        izz="4.48301854713417E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0431.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0431.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re0431"
+    type="continuous">
+    <origin
+      xyz="0.0129223764262084 -0.0129223764262028 0.0408799999999865"
+      rpy="0 0 0" />
+    <parent
+      link="fly043" />
+    <child
+      link="fly0431" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly0432">
+    <inertial>
+      <origin
+        xyz="-0.0703667690679637 0.0354841224228135 -0.00595022651720678"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174869820226906" />
+      <inertia
+        ixx="8.57428116329266E-06"
+        ixy="1.57972714903596E-05"
+        ixz="-1.42772175435138E-07"
+        iyy="3.63440738915776E-05"
+        iyz="2.54730166358007E-07"
+        izz="4.48301837829603E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0432.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly0432.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re0432"
+    type="continuous">
+    <origin
+      xyz="-0.0129223764261572 0.0129223764261683 0.0408800000000135"
+      rpy="0 0 0" />
+    <parent
+      link="fly043" />
+    <child
+      link="fly0432" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly11">
+    <inertial>
+      <origin
+        xyz="-0.0135094306948948 0.0134116550283035 -0.013443123592163"
+        rpy="0 0 0" />
+      <mass
+        value="0.0226304511848902" />
+      <inertia
+        ixx="6.82848302553049E-06"
+        ixy="-2.93320474486277E-06"
+        ixz="1.12725467056907E-06"
+        iyy="1.60121122832438E-05"
+        iyz="-3.28801401806955E-08"
+        izz="1.44399859431576E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re11"
+    type="continuous">
+    <origin
+      xyz="0.0137885822331375 0.0307591449816201 0.0914999999999919"
+      rpy="1.5707963267949 0 -2.35619449019234" />
+    <parent
+      link="base_link0" />
+    <child
+      link="fly11" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="fly12">
+    <inertial>
+      <origin
+        xyz="-0.0135094306948734 0.0134116550282768 -0.0134431235921599"
+        rpy="0 0 0" />
+      <mass
+        value="0.0226304511848902" />
+      <inertia
+        ixx="6.82848302552967E-06"
+        ixy="-2.93320474486147E-06"
+        ixz="1.12725467056912E-06"
+        iyy="1.60121122832447E-05"
+        iyz="-3.28801401808359E-08"
+        izz="1.44399859431576E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re12"
+    type="continuous">
+    <origin
+      xyz="0.0307591449816147 -0.0137885822331324 0.0915"
+      rpy="1.5707963267949 0 2.35619449019235" />
+    <parent
+      link="base_link0" />
+    <child
+      link="fly12" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="fly13">
+    <inertial>
+      <origin
+        xyz="0.0135094306948653 0.0134116550282366 -0.0105568764075428"
+        rpy="0 0 0" />
+      <mass
+        value="0.0226304511848902" />
+      <inertia
+        ixx="6.82848302552871E-06"
+        ixy="2.93320474486063E-06"
+        ixz="1.12725467056764E-06"
+        iyy="1.60121122832452E-05"
+        iyz="3.28801401814449E-08"
+        izz="1.44399859431579E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re13"
+    type="continuous">
+    <origin
+      xyz="-0.0137885822331378 0.0307591449816201 0.0915"
+      rpy="1.5707963267949 0 2.35619449019235" />
+    <parent
+      link="base_link0" />
+    <child
+      link="fly13" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="fly14">
+    <inertial>
+      <origin
+        xyz="0.013509430694891 0.013411655028307 -0.0105568764078372"
+        rpy="0 0 0" />
+      <mass
+        value="0.0226304511848902" />
+      <inertia
+        ixx="6.82848302552898E-06"
+        ixy="2.9332047448604E-06"
+        ixz="1.12725467056908E-06"
+        iyy="1.60121122832453E-05"
+        iyz="3.28801401809841E-08"
+        izz="1.44399859431576E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mmsrobot_description/meshes/fly14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fly_re14"
+    type="continuous">
+    <origin
+      xyz="-0.0307591449816149 -0.0137885822331324 0.0914999999999891"
+      rpy="1.5707963267949 0 -2.35619449019234" />
+    <parent
+      link="base_link0" />
+    <child
+      link="fly14" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/mmsrobot</robotNamespace>
+  </plugin>
+  </gazebo>
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel_re1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel_re2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re10">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re11">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re12">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re131">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re21">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor7">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran8">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re22">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor8">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran9">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re231">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor9">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran10">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re30">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor10">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran11">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re31">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor11">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>  
+  <transmission name="tran12">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re32">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor12">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+
+  <transmission name="tran13">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re331">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor13">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+
+  <transmission name="tran14">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re41">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor14">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+
+  <transmission name="tran15">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re42">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor15">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+
+  <transmission name="tran16">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="foot_re431">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor16">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+   <transmission name="tran17">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_pr00">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor17">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran18">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_pr012">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor18">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran19">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_pr022">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor19">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+   <transmission name="tran20">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_pr032">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor20">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran21">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_pr042">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor21">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran22">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re013">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor22">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran23">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re023">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor23">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran24">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re033">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor24">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran25">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re043">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor25">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran26">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re0141">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor26">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran27">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re0142">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor27">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>  
+  <transmission name="tran28">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re0241">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor28">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+
+  <transmission name="tran29">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re0242">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor29">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+
+  <transmission name="tran30">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re0341">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor30">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+
+  <transmission name="tran31">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re0342">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor31">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+
+  <transmission name="tran32">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re0431">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor32">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+    <transmission name="tran33">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fly_re0432">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor33">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> 
+</robot>

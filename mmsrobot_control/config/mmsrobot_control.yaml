@@ -1,0 +1,164 @@
+mmsrobot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+
+  # wheel Controllers ---------------------------------------
+  wheel_re1_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: wheel_re1
+    pid: {p:  0.1, i: 0, d: 0}
+  wheel_re2_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: wheel_re2
+    pid: {p:  0.1, i: 0, d: 0}
+
+  # foot Controllers ---------------------------------------
+  foot_re10_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re10
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+  foot_re11_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re11
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+
+  foot_re12_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re12
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+  foot_re131_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re131
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+
+
+  foot_re21_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re21
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+
+  foot_re22_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re22
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+  foot_re231_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re231
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+
+  foot_re30_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re30
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+  foot_re31_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re31
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+
+  foot_re32_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re32
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+  foot_re331_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re331
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+
+
+  foot_re41_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re41
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+
+  foot_re42_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re42
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+  foot_re431_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_re431
+    pid: {p:  3.5, i: 0.05, d: 0.1}
+  # fly Tranform position Controllers ---------------------------------------
+
+  fly_pr00_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_pr00
+    pid: {p:  4, i: 0.05, d: 0.25}
+
+  fly_pr012_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_pr012
+    pid: {p:  4, i: 0.05, d: 0.25}
+  fly_pr022_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_pr022
+    pid: {p:  4, i: 0.05, d: 0.25}
+  fly_pr032_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_pr032
+    pid: {p:  4, i: 0.05, d: 0.25}
+  fly_pr042_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_pr042
+    pid: {p:  4, i: 0.05, d: 0.25}
+
+  # fly Velocity Controllers ---------------------------------------
+  fly_re013_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: fly_re013
+    pid: {p:  0.1, i: 0, d: 0}
+  fly_re023_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: fly_re023
+    pid: {p:  0.1, i: 0, d: 0}
+  fly_re033_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: fly_re033
+    pid: {p:  0.1, i: 0, d: 0}
+  fly_re043_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: fly_re043
+    pid: {p:  0.1, i: 0, d: 0}
+
+  # propeller Position Controllers ---------------------------------------
+
+  fly_re0141_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_re0141
+    pid: {p:  0.51, i: 0, d: 0}
+  fly_re0142_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_re0142
+    pid: {p:  0.51, i: 0, d: 0}
+
+  fly_re0241_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_re0241
+    pid: {p:  0.51, i: 0, d: 0}
+  fly_re0242_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_re0242
+    pid: {p:  0.51, i: 0, d: 0}
+
+  fly_re0341_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_re0341
+    pid: {p:  0.51, i: 0, d: 0}
+  fly_re0342_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_re0342
+    pid: {p:  0.51, i: 0, d: 0}
+
+  fly_re0431_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_re0431
+    pid: {p:  0.51, i: 0, d: 0}
+  fly_re0432_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fly_re0432
+    pid: {p:  0.51, i: 0, d: 0}
+
+
+

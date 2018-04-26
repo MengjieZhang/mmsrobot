@@ -1,0 +1,16 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find mmrobot_control)/config/mmrobot_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/mmrobot" args="joint_state_controller wheel_re1_velocity_controller  wheel_re2_velocity_controller foot_re10_position_controller foot_re11_position_controller   foot_re12_position_controller foot_re131_position_controller foot_re21_position_controller foot_re22_position_controller foot_re231_position_controller foot_re30_position_controller foot_re31_position_controller foot_re32_position_controller foot_re331_position_controller foot_re41_position_controller foot_re42_position_controller foot_re431_position_controller  "/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/mmrobot/joint_states" />
+  </node>
+
+</launch>

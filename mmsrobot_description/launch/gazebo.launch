@@ -1,0 +1,41 @@
+<launch>
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <param name="robot_description"
+    textfile="$(find mmsrobot_description)/robots/mmsrobot.urdf" />
+  <param name="robot_description_sdf"
+    textfile="$(find mmsrobot_description)/robots/mmsrobot.sdf" />
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find mmsrobot_description)/robots/mmsrobot.sdf -sdf -model mmsrobot"
+    output="screen" />
+
+    <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find mmsrobot_control)/config/mmsrobot_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/mmsrobot" args="joint_state_controller wheel_re1_velocity_controller  wheel_re2_velocity_controller foot_re10_position_controller foot_re11_position_controller   foot_re12_position_controller foot_re131_position_controller foot_re21_position_controller foot_re22_position_controller foot_re231_position_controller foot_re30_position_controller foot_re31_position_controller foot_re32_position_controller foot_re331_position_controller foot_re41_position_controller foot_re42_position_controller foot_re431_position_controller  fly_pr00_position_controller fly_pr012_position_controller fly_pr022_position_controller fly_pr032_position_controller fly_pr042_position_controller fly_re013_velocity_controller
+fly_re023_velocity_controller fly_re033_velocity_controller fly_re043_velocity_controller fly_re0141_position_controller fly_re0142_position_controller fly_re0241_position_controller fly_re0242_position_controller fly_re0341_position_controller fly_re0342_position_controller fly_re0431_position_controller fly_re0432_position_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/mmsrobot/joint_states" />
+  </node>
+  <node
+    name="fake_joint_calibration"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+  <!-- Load RQT with a pre-setup GUI for Baxter controls from a perspective file  -->
+  <node name="mmsrobot_rqt" pkg="rqt_gui" type="rqt_gui" respawn="false"
+	output="screen" args="--perspective-file $(find mmsrobot_control)/launch/action1.perspective"/>
+</launch>

@@ -1,0 +1,93 @@
+{
+  "keys": {},
+  "groups": {
+    "pluginmanager": {
+      "keys": {
+        "running-plugins": {
+          "type": "repr",
+          "repr": "{u'rqt_publisher/Publisher': [1]}"
+        }
+      },
+      "groups": {
+        "plugin__rqt_msg__Messages__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__messages.ui": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Message Type Browser'"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_publisher__Publisher__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__PublisherWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "True"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Message Publisher'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "publishers": {
+                  "type": "repr",
+                  "repr": "u\"[{'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/wheel_re1_velocity_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 0, 'counter': 541}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/wheel_re2_velocity_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 1, 'counter': 541}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/foot_re10_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 2, 'counter': 540}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/foot_re30_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 3, 'counter': 539}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/foot_re11_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 4, 'counter': 539}, {'topic_name': '/mmsrobot/foot_re21_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 5, 'counter': 538}, {'topic_name': '/mmsrobot/foot_re31_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 6, 'counter': 537}, {'topic_name': '/mmsrobot/foot_re41_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 7, 'counter': 536}, {'topic_name': '/mmsrobot/foot_re12_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 8, 'counter': 535}, {'topic_name': '/mmsrobot/foot_re22_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 9, 'counter': 534}, {'topic_name': '/mmsrobot/foot_re32_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 10, 'counter': 534}, {'topic_name': '/mmsrobot/foot_re42_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 11, 'counter': 533}, {'topic_name': '/mmsrobot/foot_re131_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 12, 'counter': 532}, {'topic_name': '/mmsrobot/foot_re231_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 13, 'counter': 531}, {'topic_name': '/mmsrobot/foot_re331_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 14, 'counter': 530}, {'topic_name': '/mmsrobot/foot_re431_position_controller/command', 'type_name': 'std_msgs/Float64', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 15, 'counter': 530}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_pr00_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {u'/mmsrobot/fly_pr00_position_controller/command/data': '0'}, 'publisher_id': 16, 'counter': 500}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_pr012_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {u'/mmsrobot/fly_pr012_position_controller/command/data': '0'}, 'publisher_id': 17, 'counter': 431}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_pr022_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 18, 'counter': 214}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_pr032_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 19, 'counter': 215}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_pr042_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 20, 'counter': 215}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re013_velocity_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 21, 'counter': 57}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re023_velocity_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 22, 'counter': 56}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re033_velocity_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 23, 'counter': 55}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re043_velocity_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 24, 'counter': 54}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re0141_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 27, 'counter': 54}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re0142_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 28, 'counter': 53}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re0241_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 29, 'counter': 52}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re0242_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 30, 'counter': 47}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re0341_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 31, 'counter': 47}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re0342_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 32, 'counter': 46}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re0431_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 33, 'counter': 46}, {'type_name': 'std_msgs/Float64', 'topic_name': '/mmsrobot/fly_re0432_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {}, 'publisher_id': 34, 'counter': 45}]\""
+                }
+              },
+              "groups": {}
+            }
+          }
+        }
+      }
+    },
+    "mainwindow": {
+      "keys": {
+        "geometry": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('01d9d0cb00020000000004070000001f0000076b000003f00000040a0000003c00000768000003ed00000000000000000780')",
+          "pretty-print": "         k     < h       "
+        },
+        "state": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000000fd00000002000000020000035f00000379fc0100000001fb00000058007200710074005f007000750062006c00690073006800650072005f005f005000750062006c00690073006800650072005f005f0031005f005f005000750062006c0069007300680065007200570069006400670065007401000000000000035f0000027000ffffff00000003000005ac0000025dfc0100000002fb00000050007200710074005f0061006300740069006f006e005f005f0041006300740069006f006e0050006c007500670069006e005f005f0031005f005f006d0065007300730061006700650073002e0075006901000000000000025e0000000000000000fb00000042007200710074005f006d00730067005f005f004d0065007300730061006700650073005f005f0031005f005f006d0065007300730061006700650073002e00750069030000012200000114000005ac0000025d0000035f0000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')",
+          "pretty-print": "                 Xrqt_publisher__Publisher__1__PublisherWidget                   Prqt_action__ActionPlugin__1__messages.ui          Brqt_msg__Messages__1__messages.ui                            6MinimizedDockWidgetsToolbar        "
+        }
+      },
+      "groups": {
+        "toolbar_areas": {
+          "keys": {
+            "MinimizedDockWidgetsToolbar": {
+              "type": "repr",
+              "repr": "8"
+            }
+          },
+          "groups": {}
+        }
+      }
+    }
+  }
+}
